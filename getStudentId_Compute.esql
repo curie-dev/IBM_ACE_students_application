@@ -8,7 +8,7 @@ CREATE COMPUTE MODULE getStudentId_Compute
 		 DECLARE studentData ROW;
 		 SET studentID = InputLocalEnvironment.REST.Input.Parameters.studentId;
 		
-		SET studentData = THE (SELECT  R  FROM  Database.ACENODE_DS.public.student1 AS R WHERE R.studentid = studentID);
+		SET studentData = THE (SELECT  R  FROM  Database.ACENODE_DS.public.student AS R WHERE R.studentid = studentID);
 		
 		IF CARDINALITY(studentData.*[]) > 0 THEN
 		
