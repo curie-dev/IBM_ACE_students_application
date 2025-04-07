@@ -1,10 +1,10 @@
 
 
-CREATE COMPUTE MODULE getStudentId_Compute1
+CREATE COMPUTE MODULE postStudentDetails_Compute1
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		SET OutputRoot.JSON.Data.status = 'Failure';
-		SET OutputRoot.JSON.Data.message = 'Error occured while fetching the student details';
+		SET OutputRoot.JSON.Data.message = 'Error occured while inserting the student details';
 		RETURN TRUE;
 	END;
 
